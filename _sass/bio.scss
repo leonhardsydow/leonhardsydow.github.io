@@ -1,0 +1,36 @@
+.bio {
+  max-width: 500px;
+  margin-bottom: 50px;
+  height: 40%;
+}
+
+.bio__header {
+  margin-bottom: 20px;
+  font-weight: 700;
+
+  a {
+  	text-decoration: none;
+
+  	&:hover {
+  		text-decoration: none;
+  	}
+  }
+}
+
+.bio__social {
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.bio__img {
+  display: block;
+  opacity: 0.7;
+  position: absolute;
+  max-width: 400px;
+  max-height: 500px;
+  margin-left: 50%;
+  margin-top: -90px;
+  z-index: -1;
+}
