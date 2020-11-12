@@ -17,6 +17,12 @@
   }
 }
 
+.bio__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .bio__social {
   margin: 0;
   margin-top: 10px;
@@ -24,13 +30,18 @@
   list-style: none;
 }
 
+.bio__desc,
+.bio__social {
+  flex-shrink: 3;
+}
+
 .bio__img {
   display: block;
   opacity: 0.7;
-  position: absolute;
+  // position: absolute;
   max-width: 400px;
   max-height: 500px;
-  margin-left: 50%;
-  margin-top: -90px;
+  // margin-left: 50%;
+  // margin-top: -90px;
   z-index: -1;
 }

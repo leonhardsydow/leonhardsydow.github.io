@@ -1,9 +1,16 @@
 .post__meta {
-  margin: 30px 0 20px;
+  margin: 30px 0 5px;
   border-bottom: 1px solid $color__black;
   overflow: hidden;
   font-weight: 700;
+  font-size: larger;
 }
+
+.post__subtitle {
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
 
 .post__paginate {
   overflow: hidden;

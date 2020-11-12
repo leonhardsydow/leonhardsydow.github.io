@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
   {% include head.html %}
-
+<!--  TODO: ADD SUBTITLE -->
   <body>
     <div class="container">
       <div class="post">
@@ -17,7 +17,9 @@
           </div>
           <div class="post__cat">{{ page.category }}</div>
         </div>
-
+      <div class="post__subtitle">
+        {{ page.subtitle }}
+      </div>
         <div class="post__body">
           {{ content }}
         </div>
