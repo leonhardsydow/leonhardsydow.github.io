@@ -1,7 +1,7 @@
 # site
 title: Leonhard von Sydow
 baseurl: "/"
-url: "https://leonhardsydow.github.io"
+url: "https://leonhard-sydow.com"
 favicon: "/assets/img/hexa.svg"
 tagline: "Leonhard von Sydows Website he made about himself"
 author: "Leonhard von Sydow"
@@ -27,6 +27,7 @@ prev-next: true
 
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 # build settings
 markdown: kramdown
