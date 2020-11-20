@@ -3,6 +3,13 @@ title: Leonhard von Sydow
 baseurl: "/"
 url: "https://leonhardsydow.github.io"
 favicon: "/assets/img/hexa.svg"
+tagline: "Leonhard von Sydows Website he made about himself"
+author: "Leonhard von Sydow"
+social:
+  name: Leonhard von Sydow
+  links: 
+  - https://github.com/leonhardsydow
+  - https://de.linkedin.com/in/leonhard-v-sydow-1765841a8
 
 # bio
 header: Leonhard von Sydow
@@ -17,6 +24,9 @@ post_cat: Type
 
 # post detail
 prev-next: true
+
+plugins:
+  - jekyll-seo-tag
 
 # build settings
 markdown: kramdown
