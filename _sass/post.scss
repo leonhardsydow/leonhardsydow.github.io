@@ -80,6 +80,23 @@ $paginate-padding: 13px;
   }
 }
 
+.post__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.post__img {
+  display: block;
+  position: absolute;
+  max-width: 500px;
+  max-height: 500px;
+  top: 250 + random(250) - random(250) + px;
+  left: random(500) + px;
+  opacity: 0.2;
+}
+
+
 // media queries
 @include media-query($on-laptop) {
   .post {

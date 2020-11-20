@@ -1,44 +1,57 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
-  {% include head.html %}
+{% include head.html %}
 <!--  TODO: ADD SUBTITLE -->
-  <body>
-    <div class="container">
-      <div class="post">
-        {% include header.html %}
-        <div class="post__meta">
-          <div class="post__title">{{ page.title }}</div>
-          <div class="post__date">
-            {% if site.date_format %}
-              {{ page.date | date: site.date_format }}
-            {% else %}
-              {{ page.date | date: "%b %-d, %Y" }}
-            {% endif %}
-          </div>
-          <div class="post__cat">{{ page.category }}</div>
+
+<body>
+  <div class="container">
+    <div class="bio__container">
+      {% include header.html %}
+      <div class="bio__img__container">
+      <img class="bio__img" src="{{ page.img | default: "assets/img/headshot.PNG" }}" />
+    </div>
+    </div>
+    <div class="post">
+      <div class="post__meta">
+        <div class="post__title">{{ page.title }}</div>
+        <div class="post__date">
+          {% if site.date_format %}
+          {{ page.date | date: site.date_format }}
+          {% else %}
+          {{ page.date | date: "%b %-d, %Y" }}
+          {% endif %}
         </div>
+        <div class="post__cat">{{ page.category }}</div>
+      </div>
       <div class="post__subtitle">
         {{ page.subtitle }}
       </div>
+      <div class="post__container">
         <div class="post__body">
           {{ content }}
         </div>
-
-        {% if site.prev-next %}
-          <div class="post__paginate">
-            {% if page.previous.url %}
-              <a class="post__paginate-left" href="{{ site.url }}{{ page.previous.url | relative_url }}">{{ page.previous.title }}</a>
-            {% endif %}
-
-            {% if page.next.url %}
-              <a class="post__paginate-right" href="{{ site.url }}{{ page.next.url | relative_url }}">{{ page.next.title }}</a>
-            {% endif %}
-          </div>
-        {% endif %}
+        <!-- {% if page.img %}
+        <img class="post__img" src="{{ page.img }}" alt="{{ page.title }}" />
+        {% endif %} -->
       </div>
 
-      {% include posts_list.html uid=page.id %}
+      {% if site.prev-next %}
+      <div class="post__paginate">
+        {% if page.previous.url %}
+        <a class="post__paginate-left"
+          href="{{ site.url }}{{ page.previous.url | relative_url }}">{{ page.previous.title }}</a>
+        {% endif %}
+
+        {% if page.next.url %}
+        <a class="post__paginate-right"
+          href="{{ site.url }}{{ page.next.url | relative_url }}">{{ page.next.title }}</a>
+        {% endif %}
+      </div>
+      {% endif %}
     </div>
-  </body>
+
+    {% include posts_list.html uid=page.id %}
+  </div>
+</body>
 
 </html>

@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
-  {% include head.html %}
+{% include head.html %}
 
-  <body>
-    <div class="container">
-      <div class="bio__container">
+<body>
+  <div class="container">
+    <div class="bio__container">
       {% include header.html %}
-      <img class="bio__img" src="assets/img/headshot.PNG"/>
+      <div class="bio__img__container">
+        <img class="bio__img" src="{{ page.img | default: "assets/img/headshot.PNG" }}" />
+      </div>
     </div>
-      {{ content }}
-    </div>
-  </body>
+    {{ content }}
+  </div>
+</body>
 
 </html>

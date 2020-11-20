@@ -10,13 +10,12 @@
 .row__img {
   display: none;
   position: absolute;
-  max-width: 500px;
-  max-height: 500px;
-  top: 250 + random(250) - random(250) + px;
+  max-width: 300px;
+  max-height: 200px;
+  top: -50 + random(250) - random(250) + px;
   left: random(500) + px;
   z-index: -1;
   opacity: 0;
-  transition: opacity 500ms;
 }
 
 .row__cols,
@@ -39,16 +38,19 @@
 .row__date,
 .row__cat {
   float: left;
-  border-bottom: 1px solid $color__black;
 }
 
 .row__title {
   width: 100%;
+  flex-grow: 4;
 }
 .row__subtitle {
-  margin-top: 4px;
-  margin-bottom: 4px;
+  margin-top: 2px;
+  margin-bottom: 6px;
   font-size: smaller;
+  width: 100%;
+  float: left;
+  border-bottom: 2px solid $color__black;
 }
 
 .row__date,
@@ -56,7 +58,8 @@
   width: auto;
 }
 
-.row__cat {
+.row__cat,
+.row__date {
   position: relative;
   margin-left: 10px;
 
@@ -74,6 +77,13 @@
 // behaviors
 .row__active {
   text-decoration: line-through;
+}
+
+.row__container {
+  flex-direction: column;
+}
+.row__top {
+  display: flex
 }
 
 // media queries
@@ -96,22 +106,22 @@
     }
 
     &:nth-child(2n) .row__img {
-      top: 250 + random(250) - random(250) + px;
+      top: -50 + random(250) - random(250) + px;
       left: random(500) + px;
     }
 
     &:nth-child(3n) .row__img {
-      top: 250 + random(250) - random(250) + px;
+      top: -50 + random(250) - random(250) + px;
       left: random(500) + px;
     }
 
     &:nth-child(4n) .row__img {
-      top: 250 + random(250) - random(250) + px;
+      top: -50 + random(250) - random(250) + px;
       left: random(500) + px;
     }
 
     &:nth-child(5n) .row__img {
-      top: 250 + random(250) - random(250) + px;
+      top: -50 + random(250) - random(250) + px;
       left: random(500) + px;
     }
   }
@@ -132,7 +142,8 @@
     width: 25%;
   }
 
-  .row__cat {
+  .row__cat,
+  .row__date {
     margin: 0;
 
     &:before {
